@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 1s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    text-align: center;
+}
+
+@keyframes slideUpAndFade {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+        font-size: 3em;
+    }
+    50% {
+        transform: translateY(-50px);
+        opacity: 0.5;
+        font-size: 2em;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+        font-size: 1em;
+    }
+}
+
+.animate-equation {
+    animation: slideUpAndFade 1s ease forwards;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 3em;
+    position: relative;
+}
+
+.number, .signal, .result {
+    margin: 0 5px;
+}
+
+.number input {
+    width: 150px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    background-color: transparent;
+    color: inherit;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+}
